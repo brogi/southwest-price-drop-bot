@@ -49,7 +49,7 @@ services:
     ports:
       - "27017:27017"
     healthcheck:
-      test: echo 'db.stats().ok' | mongo localhost:27017/sw_db --quiet  ##change db to whatever you specify in .env
+      test: echo 'db.stats().ok' | mongo mongodb+srv://gbromelia:6s5qUIdsoKCskcKd@cluster0.yjneli0.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0 --quiet  ##change db to whatever you specify in .env
       interval: 30s
       timeout: 10s
       retries: 12
